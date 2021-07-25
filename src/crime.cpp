@@ -1,10 +1,5 @@
 #include "../inc/crime.hpp"
 
-Crime::~Crime()
-{
-    delete this->movie_;
-}
-
 string Crime::getTitle() const
 {
     return this->movie_->getTitle() + "Crime ";

@@ -1,10 +1,5 @@
 #include "../inc/adventure.hpp"
 
-Adventure::~Adventure()
-{
-    delete this->movie_;
-}
-
 string Adventure::getTitle() const
 {
     return this->movie_->getTitle() + "Adventure ";
