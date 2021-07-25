@@ -1,7 +1,6 @@
 #ifndef __HORROR_HPP__
 #define __HORROR_HPP__
 
-#include <string>
 #include "movie_decorator.hpp"
 
 class Horror : public MovieDecorator

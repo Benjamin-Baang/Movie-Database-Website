@@ -1,7 +1,6 @@
 #ifndef __COMEDY_HPP__
 #define __COMEDY_HPP__
 
-#include <string>
 #include "movie_decorator.hpp"
 
 class Comedy : public MovieDecorator

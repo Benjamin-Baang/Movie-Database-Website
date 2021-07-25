@@ -1,7 +1,6 @@
 #ifndef __DRAMA_HPP__
 #define __DRAMA_HPP__
 
-#include <string>
 #include "movie_decorator.hpp"
 
 class Drama : public MovieDecorator

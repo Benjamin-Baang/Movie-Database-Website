@@ -1,7 +1,6 @@
 #ifndef __MOVIE_BASE_HPP__
 #define __MOVIE_BASE_HPP__
 
-#include <string>
 #include "movie.hpp"
 
 class MovieBase : public Movie

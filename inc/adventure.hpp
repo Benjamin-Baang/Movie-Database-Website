@@ -1,7 +1,6 @@
 #ifndef __ADVENTURE_HPP__
 #define __ADVENTURE_HPP__
 
-#include <string>
 #include "movie_decorator.hpp"
 
 class Adventure : public MovieDecorator

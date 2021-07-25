@@ -1,7 +1,6 @@
 #ifndef __ANIMATION_HPP__
 #define __ANIMATION_HPP__
 
-#include <string>
 #include "movie_decorator.hpp"
 
 class Animation : public MovieDecorator

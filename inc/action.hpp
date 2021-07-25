@@ -1,7 +1,6 @@
 #ifndef __ACTION_HPP__
 #define __ACTION_HPP__
 
-#include <string>
 #include "movie_decorator.hpp"
 
 class Action : public MovieDecorator
