@@ -1,0 +1,30 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: recursive
+        
+    - name: Make build directory
+      run: mkdir build
+     
+    - name: Build CMake
+      run: cmake -Bbuild .
+
+    - name: Make
+      run: cmake --build build/ --target test
+
+    - name: Execute test executable
+      run: ./build/test
