@@ -38,7 +38,6 @@ vector<Movie*> doubleVectorToMovie(vector< vector<string> > &movies)
                 else if (movies[row][col] == "Romance") { movie = new Romance(movie); }
             }
             result.push_back(movie);
-            delete movie;
         }
     }
     return result;
