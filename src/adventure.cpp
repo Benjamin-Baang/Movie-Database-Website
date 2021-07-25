@@ -2,7 +2,7 @@
 
 string Adventure::getTitle() const
 {
-    return this->movie_->getTitle() + "Adventure ";
+    return this->movie_->getTitle();
 }
 
 string Adventure::getGenres() const

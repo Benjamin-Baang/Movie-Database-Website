@@ -2,7 +2,7 @@
 
 string Horror::getTitle() const
 {
-    return this->movie_->getTitle() + "Horror ";
+    return this->movie_->getTitle();
 }
 
 string Horror::getGenres() const
