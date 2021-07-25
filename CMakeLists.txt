@@ -4,16 +4,13 @@ SET(CMAKE_CXX_STANDARD 11)
 
 ADD_SUBDIRECTORY(googletest)
 
+include_directories(inc)
+
+file(GLOB SOURCES "src/*.cpp")
+
 ADD_EXECUTABLE(test 
     tests/test.cpp
-    src/action.cpp
-    src/adventure.cpp
-    src/animation.cpp
-    src/comedy.cpp
-    src/crime.cpp
-    src/drama.cpp
-    src/horror.cpp
-    src/romance.cpp
+    ${SOURCES}
 )
 
 find_package(Sqlite3)
