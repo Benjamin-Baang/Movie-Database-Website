@@ -3,20 +3,12 @@
 
 #include "gtest/gtest.h"
 
-#include "../inc/movie_base.hpp"
-#include "../inc/action.hpp"
-#include "../inc/adventure.hpp"
-#include "../inc/animation.hpp"
-#include "../inc/comedy.hpp"
-#include "../inc/crime.hpp"
-#include "../inc/drama.hpp"
-#include "../inc/horror.hpp"
-#include "../inc/romance.hpp"
+#include "../inc/myLib.hpp"
 
 TEST (DecoratorTest, ActionGenreConstructor)
 {
     Movie *movie = new MovieBase("");
-    baseMovie = new Action(movie);
+    movie = new Action(movie);
     string result = "Action ";
     EXPECT_EQ(movie->getGenres(), result);
     delete movie;
@@ -25,7 +17,7 @@ TEST (DecoratorTest, ActionGenreConstructor)
 TEST (DecoratorTest, AdventureGenreConstructor)
 {
     Movie *movie = new MovieBase("");
-    baseMovie = new Adventure(movie);
+    movie = new Adventure(movie);
     string result = "Adventure ";
     EXPECT_EQ(movie->getGenres(), result);
     delete movie;
@@ -34,7 +26,7 @@ TEST (DecoratorTest, AdventureGenreConstructor)
 TEST (DecoratorTest, AnimationGenreConstructor)
 {
     Movie *movie = new MovieBase("");
-    baseMovie = new Animation(movie);
+    movie = new Animation(movie);
     string result = "Animation ";
     EXPECT_EQ(movie->getGenres(), result);
     delete movie;
@@ -43,7 +35,7 @@ TEST (DecoratorTest, AnimationGenreConstructor)
 TEST (DecoratorTest, ComedyGenreConstructor)
 {
     Movie *movie = new MovieBase("");
-    baseMovie = new Comedy(movie);
+    movie = new Comedy(movie);
     string result = "Comedy ";
     EXPECT_EQ(movie->getGenres(), result);
     delete movie;
@@ -52,7 +44,7 @@ TEST (DecoratorTest, ComedyGenreConstructor)
 TEST (DecoratorTest, CrimeGenreConstructor)
 {
     Movie *movie = new MovieBase("");
-    baseMovie = new Crime(movie);
+    movie = new Crime(movie);
     string result = "Crime ";
     EXPECT_EQ(movie->getGenres(), result);
     delete movie;
@@ -61,7 +53,7 @@ TEST (DecoratorTest, CrimeGenreConstructor)
 TEST (DecoratorTest, DramaGenreConstructor)
 {
     Movie *movie = new MovieBase("");
-    baseMovie = new Drama(movie);
+    movie = new Drama(movie);
     string result = "Drama ";
     EXPECT_EQ(movie->getGenres(), result);
     delete movie;
@@ -70,7 +62,7 @@ TEST (DecoratorTest, DramaGenreConstructor)
 TEST (DecoratorTest, HorrorGenreConstructor)
 {
     Movie *movie = new MovieBase("");
-    baseMovie = new Horror(movie);
+    movie = new Horror(movie);
     string result = "Horror ";
     EXPECT_EQ(movie->getGenres(), result);
     delete movie;
@@ -79,7 +71,7 @@ TEST (DecoratorTest, HorrorGenreConstructor)
 TEST (DecoratorTest, RomanceGenreConstructor)
 {
     Movie *movie = new MovieBase("");
-    baseMovie = new Romance(movie);
+    movie = new Romance(movie);
     string result = "Romance ";
     EXPECT_EQ(movie->getGenres(), result);
     delete movie;
@@ -88,8 +80,8 @@ TEST (DecoratorTest, RomanceGenreConstructor)
 TEST (DecoratorTest, ActionAdventureGenreConstructor)
 {
     Movie *movie = new MovieBase("");
-    baseMovie = new Action(movie);
-    baseMovie = new Adventure(movie);
+    movie = new Action(movie);
+    movie = new Adventure(movie);
     string result = "Action Adventure ";
     EXPECT_EQ(movie->getGenres(), result);
     delete movie;
@@ -98,9 +90,9 @@ TEST (DecoratorTest, ActionAdventureGenreConstructor)
 TEST (DecoratorTest, AnimationComedyCrimeGenreConstructor)
 {
     Movie *movie = new MovieBase("");
-    baseMovie = new Animation(movie);
-    baseMovie = new Comedy(movie);
-    baseMovie = new Crime(movie);
+    movie = new Animation(movie);
+    movie = new Comedy(movie);
+    movie = new Crime(movie);
     string result = "Animation Comedy Crime ";
     EXPECT_EQ(movie->getGenres(), result);
     delete movie;
