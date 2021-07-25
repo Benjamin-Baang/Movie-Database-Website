@@ -5,9 +5,6 @@
 
 class Action : public MovieDecorator
 {
-private: 
-    Movie *movie_;
-
 public:
     Action(Movie *movie);
     ~Action();

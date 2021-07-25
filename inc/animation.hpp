@@ -5,9 +5,6 @@
 
 class Animation : public MovieDecorator
 {
-private: 
-    Movie *movie_;
-
 public:
     Animation(Movie *movie);
     ~Animation();

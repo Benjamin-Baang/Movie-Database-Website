@@ -5,9 +5,6 @@
 
 class Drama : public MovieDecorator
 {
-private: 
-    Movie *movie_;
-
 public:
     Drama(Movie *movie);
     ~Drama();

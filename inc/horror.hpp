@@ -5,9 +5,6 @@
 
 class Horror : public MovieDecorator
 {
-private: 
-    Movie *movie_;
-
 public:
     Horror(Movie *movie);
     ~Horror();
