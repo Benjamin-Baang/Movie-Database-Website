@@ -7,7 +7,7 @@
 
 TEST (StrategyTitleTest, AllTitles)
 {
-    Query *query = new Query(new TitleStrategy());
+    Query *query = new Query(new TitleSearch());
     vector<string> condition;
     condition.push_back("");
     vector<Movie*> result = query->search(condition);
@@ -299,7 +299,7 @@ TEST (StrategyTitleTest, AllTitles)
 
 TEST (StrategyTitleTest, OneTitle)
 {
-    Query *query = new Query(new TitleStrategy());
+    Query *query = new Query(new TitleSearch());
     vector<string> condition;
     condition.push_back("Weathering with You");
     vector<Movie*> result = query->search(condition);
@@ -317,7 +317,7 @@ TEST (StrategyTitleTest, OneTitle)
 
 TEST (StrategyTitleTest, PartialTitle)
 {
-    Query *query = new Query(new TitleStrategy());
+    Query *query = new Query(new TitleSearch());
     vector<string> condition;
     condition.push_back("Star Wars");
     vector<Movie*> result = query->search(condition);
@@ -341,7 +341,7 @@ TEST (StrategyTitleTest, PartialTitle)
 
 TEST (StrategyTitleTest, NonexistentTitle)
 {
-    Query *query = new Query(new TitleStrategy());
+    Query *query = new Query(new TitleSearch());
     vector<string> condition;
     condition.push_back("Minions");
     vector<Movie*> result = query->search(condition);
@@ -357,7 +357,7 @@ TEST (StrategyTitleTest, NonexistentTitle)
 
 TEST (StrategyGenreTest, OneGenre)
 {
-    Query *query = new Query(new GenreStrategy());
+    Query *query = new Query(new GenreSearch());
     vector<string> condition;
     condition.push_back("Comedy");
     condition.push_back("");
@@ -447,7 +447,7 @@ TEST (StrategyGenreTest, OneGenre)
 
 TEST (StrategyTest, TwoGenre)
 {
-    Query *query = new Query(new GenreStrategy());
+    Query *query = new Query(new GenreSearch());
     vector<string> condition;
     condition.push_back("Adventure");
     condition.push_back("Romance");
@@ -467,7 +467,7 @@ TEST (StrategyTest, TwoGenre)
 
 TEST (StrategyTest, ThreeGenre)
 {
-    Query *query = new Query(new GenreStrategy());
+    Query *query = new Query(new GenreSearch());
     vector<string> condition;
     condition.push_back("Action");
     condition.push_back("Adventure");
@@ -488,7 +488,7 @@ TEST (StrategyTest, ThreeGenre)
 
 TEST (StrategyTest, MovieNotFound)
 {
-    Query *query = new Query(new GenreStrategy());
+    Query *query = new Query(new GenreSearch());
     vector<string> condition;
     condition.push_back("Adventure");
     condition.push_back("Drama");
