@@ -8,6 +8,9 @@ cmake_install.cmake
 CMakeCache.txt
 Makefile
 query.sql
+scratchpad.cpp
+valgrind-report.txt
 
 main
 test
+scratch
