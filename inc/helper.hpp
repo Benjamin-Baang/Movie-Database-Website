@@ -17,7 +17,7 @@
 using std::string;
 using std::vector;
 
-vector< vector<string> > sqlQuery(vector<string> &condition, sqlite3_stmt *stmt);
+vector< vector<string> > sqlQuery(sqlite3_stmt *stmt);
 vector<Movie*> doubleVectorToMovie(vector< vector<string> > &movies);
 
 #endif // __HELPER_HPP__

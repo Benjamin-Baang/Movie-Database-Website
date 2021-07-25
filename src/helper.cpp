@@ -1,28 +1,23 @@
 #include "../inc/helper.hpp"
 
-vector< vector<string> > sqlQuery(vector<string> &condition, sqlite3_stmt *stmt)
+vector< vector<string> > sqlQuery(sqlite3_stmt *stmt)
 {
-    sqlite3 *db;
     vector< vector<string> > result;
     for (int i = 0; i < 4; i++) { result.push_back(vector<string>()); }
 
-    int exit = sqlite3_open("../movies.db", &db);
-    if (exit == SQLITE_OK)
+    sqlite3_step(stmt);
+    while (sqlite3_column_text(stmt, 0))
     {
-        sqlite3_step(stmt);
-        while (sqlite3_column_text(stmt, 0))
+        for (int i = 0; i < 4; i++)
         {
-            for (int i = 0; i < 4; i++)
-            {
-                result[i].push_back(string((char *)sqlite3_column_text(stmt, i)));
-            }
-            sqlite3_step(stmt);
+            result[i].push_back(string((char *)sqlite3_column_text(stmt, i)));
         }
-        if (result[0].empty()) {
-            for (int i = 0; i < 4; i++) {result[i].push_back(""); }
-        }
+        sqlite3_step(stmt);
     }
-    sqlite3_close(db);
+    if (result[0].empty()) {
+        for (int i = 0; i < 4; i++) {result[i].push_back(""); }
+    }
+    
     return result;
 }
 
