@@ -7,7 +7,6 @@ class Action : public MovieDecorator
 {
 public:
     Action(Movie *movie) : MovieDecorator(movie) {}
-    ~Action();
     string getTitle() const;
     string getGenres() const;
 };

@@ -7,7 +7,6 @@ class Comedy : public MovieDecorator
 {
 public:
     Comedy(Movie *movie) : MovieDecorator(movie) {}
-    ~Comedy();
     string getTitle() const;
     string getGenres() const;
 };
