@@ -9,7 +9,7 @@ protected:
     Movie *movie_;
 
 public:
-    MovieDecorator(Movie *movie);
+    MovieDecorator(Movie *movie) : movie_(movie) {}
     virtual ~MovieDecorator();
     string getTitle() const;
     string getGenres() const;

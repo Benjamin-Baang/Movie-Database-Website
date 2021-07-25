@@ -1,7 +1,5 @@
 #include "../inc/horror.hpp"
 
-Horror::Horror(Movie *movie) : MovieDecorator(movie) {}
-
 Horror::~Horror()
 {
     delete this->movie_;

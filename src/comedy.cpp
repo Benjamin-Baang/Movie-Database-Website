@@ -1,7 +1,5 @@
 #include "../inc/comedy.hpp"
 
-Comedy::Comedy(Movie *movie) : MovieDecorator(movie) {}
-
 Comedy::~Comedy()
 {
     delete this->movie_;

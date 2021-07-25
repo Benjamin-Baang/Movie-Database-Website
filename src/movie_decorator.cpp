@@ -1,7 +1,5 @@
 #include "../inc/movie_decorator.hpp"
 
-MovieDecorator::MovieDecorator(Movie *movie) : movie_(movie) {}
-
 MovieDecorator::~MovieDecorator() 
 {
     delete this->movie_;

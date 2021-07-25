@@ -6,7 +6,7 @@
 class Horror : public MovieDecorator
 {
 public:
-    Horror(Movie *movie);
+    Horror(Movie *movie) : MovieDecorator(movie) {}
     ~Horror();
     string getTitle() const;
     string getGenres() const;

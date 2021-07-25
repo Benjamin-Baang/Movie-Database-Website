@@ -1,7 +1,5 @@
 #include "../inc/animation.hpp"
 
-Animation::Animation(Movie *movie) : MovieDecorator(movie) {}
-
 Animation::~Animation()
 {
     delete this->movie_;

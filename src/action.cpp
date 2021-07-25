@@ -1,7 +1,5 @@
 #include "../inc/action.hpp"
 
-Action::Action(Movie *movie) : MovieDecorator(movie) {}
-
 Action::~Action()
 {
     delete this->movie_;

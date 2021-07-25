@@ -6,7 +6,7 @@
 class Drama : public MovieDecorator
 {
 public:
-    Drama(Movie *movie);
+    Drama(Movie *movie) : MovieDecorator(movie) {}
     ~Drama();
     string getTitle() const;
     string getGenres() const;
