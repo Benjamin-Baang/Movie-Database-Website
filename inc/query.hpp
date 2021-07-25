@@ -4,13 +4,13 @@
 #include "title_search.hpp"
 #include "genre_search.hpp"
 
-class QuerySearch
+class Query
 {
 private: 
     Search *search_;
 public:
-    QuerySearch(Search *search) : search_(search){}
-    ~QuerySearch();
+    Query(Search *search) : search_(search){}
+    ~Query();
     void set_strategy(Search *search);
     vector<Movie*> search(const vector<string> &conditions) const;
 };
