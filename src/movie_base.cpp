@@ -5,7 +5,7 @@ MovieBase::MovieBase(string title)
     this->title = title;
 }
 
-MovieBase::~MovieBase(){};
+MovieBase::~MovieBase(){}
 
 string MovieBase::getTitle() const 
 {
