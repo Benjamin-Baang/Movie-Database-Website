@@ -1,7 +1,7 @@
 #include <iostream>
 #include "gtest/gtest.h"
 
-#include "genre_test.hpp"
+#include "decorator_test.hpp"
 
 int main(int argc, char **argv) 
 {
