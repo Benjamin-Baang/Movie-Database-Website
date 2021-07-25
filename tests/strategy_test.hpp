@@ -244,7 +244,10 @@ TEST (StrategyTitleTest, AllTitles)
     movie = new Horror(movie);
     expect.push_back(movie);
 
-    EXPECT_EQ(expect, result);
+    for (int i = 0; i < result.size(); i++) {
+        EXPECT_EQ(expect[i]->getTitle(), result[i]->getTitle());
+        EXPECT_EQ(expect[i]->getGenres(), result[i]->getGenres());
+    }
 }
 
 TEST (StrategyTitleTest, OneTitle)
@@ -261,7 +264,10 @@ TEST (StrategyTitleTest, OneTitle)
     movie = new Drama(movie);
     expect.push_back(movie);
 
-    EXPECT_EQ(expect, result);
+    for (int i = 0; i < result.size(); i++) {
+        EXPECT_EQ(expect[i]->getTitle(), result[i]->getTitle());
+        EXPECT_EQ(expect[i]->getGenres(), result[i]->getGenres());
+    }
 }
 
 TEST (StrategyTitleTest, PartialTitle)
@@ -283,7 +289,10 @@ TEST (StrategyTitleTest, PartialTitle)
     movie = new Adventure(movie);
     expect.push_back(movie);
 
-    EXPECT_EQ(expect, result);
+    for (int i = 0; i < result.size(); i++) {
+        EXPECT_EQ(expect[i]->getTitle(), result[i]->getTitle());
+        EXPECT_EQ(expect[i]->getGenres(), result[i]->getGenres());
+    }
 }
 
 TEST (StrategyTitleTest, NonexistentTitle)
@@ -298,7 +307,10 @@ TEST (StrategyTitleTest, NonexistentTitle)
     Movie *movie = new MovieBase("");
     expect.push_back(movie);
 
-    EXPECT_EQ(expect, result);
+    for (int i = 0; i < result.size(); i++) {
+        EXPECT_EQ(expect[i]->getTitle(), result[i]->getTitle());
+        EXPECT_EQ(expect[i]->getGenres(), result[i]->getGenres());
+    }
 }
 
 TEST (StrategyGenreTest, OneGenre)
@@ -375,7 +387,10 @@ TEST (StrategyGenreTest, OneGenre)
     movie = new Comedy(movie);
     expect.push_back(movie);
 
-    EXPECT_EQ(expect, result);
+    for (int i = 0; i < result.size(); i++) {
+        EXPECT_EQ(expect[i]->getTitle(), result[i]->getTitle());
+        EXPECT_EQ(expect[i]->getGenres(), result[i]->getGenres());
+    }
 }
 
 TEST (StrategyTest, TwoGenre)
@@ -394,7 +409,10 @@ TEST (StrategyTest, TwoGenre)
     movie = new Romance(movie);
     expect.push_back(movie);
 
-    EXPECT_EQ(expect, result);
+    for (int i = 0; i < result.size(); i++) {
+        EXPECT_EQ(expect[i]->getTitle(), result[i]->getTitle());
+        EXPECT_EQ(expect[i]->getGenres(), result[i]->getGenres());
+    }
 }
 
 TEST (StrategyTest, ThreeGenre)
@@ -414,7 +432,10 @@ TEST (StrategyTest, ThreeGenre)
     movie = new Comedy(movie);
     expect.push_back(movie);
 
-    EXPECT_EQ(expect, result);
+    for (int i = 0; i < result.size(); i++) {
+        EXPECT_EQ(expect[i]->getTitle(), result[i]->getTitle());
+        EXPECT_EQ(expect[i]->getGenres(), result[i]->getGenres());
+    }
 }
 
 TEST (StrategyTest, MovieNotFound)
@@ -431,7 +452,10 @@ TEST (StrategyTest, MovieNotFound)
     Movie *movie = new MovieBase("");
     expect.push_back(movie);
 
-    EXPECT_EQ(expect, result);
+    for (int i = 0; i < result.size(); i++) {
+        EXPECT_EQ(expect[i]->getTitle(), result[i]->getTitle());
+        EXPECT_EQ(expect[i]->getGenres(), result[i]->getGenres());
+    }
 }
 
 #endif // __STRATEGY_TEST_HPP__
