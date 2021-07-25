@@ -6,6 +6,14 @@ ADD_SUBDIRECTORY(googletest)
 
 ADD_EXECUTABLE(test 
     tests/test.cpp
+    src/action.cpp
+    src/adventure.cpp
+    src/animation.cpp
+    src/comedy.cpp
+    src/crime.cpp
+    src/drama.cpp
+    src/horror.cpp
+    src/romance.cpp
 )
 
 find_package(Sqlite3)
