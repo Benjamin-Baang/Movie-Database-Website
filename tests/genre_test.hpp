@@ -98,4 +98,12 @@ TEST (DecoratorTest, AnimationComedyCrimeGenreConstructor)
     delete movie;
 }
 
+TEST (DecoratorTest, TitleConstructor)
+{
+    Movie *movie = new MovieBase("Weathering with You");
+    string result = "Weathering with You";
+    EXPECT_EQ(movie->getTitle(), result);
+    delete movie;
+}
+
 #endif // __GENRE_TEST_HPP__
