@@ -10,7 +10,7 @@ private:
 
 public:
     MovieBase(string title);
-    ~MovieBase();
+    virtual ~MovieBase();
     string getTitle() const;
     string getGenres() const;
 };
