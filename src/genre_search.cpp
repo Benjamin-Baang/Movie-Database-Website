@@ -31,6 +31,7 @@ vector<Movie*> GenreSearch::search(const vector<string> &conditions) const
         sqlite3_bind_text(stmt, 9, genre[1].c_str(), genre[1].size(), SQLITE_STATIC);
         movies = sqlQuery(stmt);
     }
+    sqlite3_finalize(stmt);
     sqlite3_close(db);
     vector<Movie*> result = doubleVectorToMovie(movies);
     return result;

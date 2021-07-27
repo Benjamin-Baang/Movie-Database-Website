@@ -15,6 +15,7 @@ vector<Movie*> TitleSearch::search(const vector<string> &conditions) const
         sqlite3_bind_text(stmt, 1, title.c_str(), title.size(), SQLITE_STATIC);
         movies = sqlQuery(stmt);
     }
+    sqlite3_finalize(stmt);
     sqlite3_close(db);
     vector<Movie*> result = doubleVectorToMovie(movies);
     return result;
